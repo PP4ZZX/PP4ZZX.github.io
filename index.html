@@ -22,7 +22,7 @@
   </div>
 
   <nav id="navbar">
-    <a href="#home" class="logo">(ง'̀-'́)ง</i></a>
+    <a href="#home" class="logo">(ง︡'-'︠)ง</a>
     <ul>
       <li>
         <a href="#profile"><i class="fa-solid fa-user"></i></a>
@@ -49,9 +49,9 @@
     <div class="home-container">
       <div class="home-content-1">
         <div class="home-text">
-          <h1>PEERAPAT SUPPREYA</h1>
-          <h2>PORTFOLIO</h2>
-          <h2>WEBSITE</h2>
+          <h1 id="typing"></h1>
+          <h2 class="colorful-text-shadow">PORTFOLIO</h2>
+          <h2 class="colorful-text-shadow">WEBSITE</h2>
         </div>
 
         <div class="home-contract">
@@ -424,6 +424,42 @@
     theEnd = scrollTop;
   });
 </script>
+
+
+
+<script>
+  var text = "PEERAPAT SUPPREYA";
+  var speed = 200;
+  var i = 0;
+  var colors = ["#000000","#6422cf", "#6392f7", "#3676ff"];
+  var colorIndex = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += "<span style='color: " + colors[colorIndex] + "'>" + text.charAt(i) + "</span>";
+      i++;
+      setTimeout(typeWriter, speed);
+    } else {
+      // Typing is complete
+      setTimeout(function() {
+        // Clear the typed text
+        document.getElementById("typing").innerHTML = "";
+        // Reset the index
+        i = 0;
+        // Change the color for the next loop
+        colorIndex = (colorIndex + 1) % colors.length;
+        // Start typing again
+        typeWriter();
+      }, 2000); // Pause for 2 seconds before starting again
+    }
+  }
+
+  // Start the typing effect
+  typeWriter();
+</script>
+
+
+
 
 
 

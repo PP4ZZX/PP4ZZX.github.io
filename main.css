@@ -10,6 +10,7 @@
   font-family: "Kanit", sans-serif;
   scroll-behavior: smooth;
   font-weight: 500;
+  user-select: none;
 }
 
 body {
@@ -202,7 +203,7 @@ ul :hover {
   width: 100%;
   height: 40px;
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.40));
   border-radius: 50px;
   padding: 5px;
 }
@@ -216,14 +217,14 @@ ul :hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 .home-contract-line-text {
    margin-left: 30px;
    height: 40px;
    width: 300px;  
-   background-color: rgba(0, 0, 0, 0.25);
+   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.40));
    border-radius: 50px;
    text-align: start;
 }
@@ -263,10 +264,12 @@ ul :hover {
   background-size: 200% 100%;
   animation: gradientAnimation 4s linear infinite;
   -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
+  scale: 1.05;
+  transform: translateY(-5px);
 }
 
 .home-contract-line .dot {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.40));
   animation: none; /* Disable the animation on hover */
   -webkit-animation: none; /* Safari support */
 }
@@ -276,6 +279,8 @@ ul :hover {
   background-size: 200% 100%;
   animation: gradientAnimation 4s linear infinite;
   -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
+  scale: 1.05;
+  transform: translateY(-5px);
 }
 
 .home-contract .centerpls  :hover {
@@ -283,6 +288,8 @@ ul :hover {
   background-size: 200% 100%;
   animation: gradientAnimation 4s linear infinite;
   -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
+  scale: 1.05;
+  transform: translateY(-5px);
 }
 
 .home-content-2 .home-img-parent {
@@ -294,14 +301,26 @@ ul :hover {
 
 .home-content-2 .home-img-parent img{
   height: 600px;
-  width: 700px;
-  transform: translateX(-15px);
+  width: 600px;
   transition: transform 0.3s ease-in-out;
 }
 
-.home-content-2 .home-img-parent img:hover {
+.home-content-2 .home-img-parent img:focus {
   transform: scale(1.2);
 }
+
+@keyframes colorCycle {
+  0% { color: #000000; }
+  25% { color: #6422cf; }
+  50% { color: #3676ff; }
+  100% { color: #000000; }
+}
+
+.colorful-text-shadow {
+  text-shadow: 0 0 1px #6200ff, 0 0 1px #0055ff, 0 0 1px #0051ff;
+  animation: colorCycle 4s infinite linear;
+}
+
 /* end home */
 
 /* profile */
@@ -829,7 +848,7 @@ ul :hover {
   gap: 50px;
   flex-wrap: wrap;
   text-align: center;
-  max-width: 1500px;
+  min-width: 720px;
 }
 
 .project-container {
