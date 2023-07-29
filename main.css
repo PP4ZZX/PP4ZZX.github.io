@@ -213,15 +213,7 @@ ul :hover {
   margin-top: 20px;
 }
 
-.home-contract-line .dot{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
 .home-contract-line-text {
-   margin-left: 30px;
    height: 40px;
    width: 300px;  
    background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.40));
@@ -259,15 +251,6 @@ ul :hover {
   }
 }
 
-.home-contract-line:hover .dot {
-  background: linear-gradient(to right, #6422cf, #6392f7, #3676ff);
-  background-size: 200% 100%;
-  animation: gradientAnimation 4s linear infinite;
-  -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
-  scale: 1.05;
-  transform: translateY(-5px);
-}
-
 .home-contract-line .dot {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.40));
   animation: none; /* Disable the animation on hover */
@@ -280,7 +263,6 @@ ul :hover {
   animation: gradientAnimation 4s linear infinite;
   -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
   scale: 1.05;
-  transform: translateY(-5px);
 }
 
 .home-contract .centerpls  :hover {
@@ -289,7 +271,6 @@ ul :hover {
   animation: gradientAnimation 4s linear infinite;
   -webkit-animation: gradientAnimation 4s linear infinite; /* Safari support */
   scale: 1.05;
-  transform: translateY(-5px);
 }
 
 .home-content-2 .home-img-parent {
@@ -305,7 +286,7 @@ ul :hover {
   transition: transform 0.3s ease-in-out;
 }
 
-.home-content-2 .home-img-parent img:focus {
+.home-content-2 .home-img-parent img:hover {
   transform: scale(1.2);
 }
 
